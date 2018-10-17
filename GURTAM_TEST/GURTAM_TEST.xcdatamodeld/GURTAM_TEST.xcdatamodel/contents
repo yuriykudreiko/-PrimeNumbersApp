@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Calculation" representedClassName="Calculation" syncable="YES">
+        <attribute name="maxNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="primeNumbers" toMany="YES" deletionRule="Cascade" destinationEntity="PrimeNumbers" inverseName="calculation" inverseEntity="PrimeNumbers" syncable="YES"/>
+    </entity>
+    <entity name="PrimeNumbers" representedClassName="PrimeNumbers" syncable="YES">
+        <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="calculation" maxCount="1" deletionRule="Nullify" destinationEntity="Calculation" inverseName="primeNumbers" inverseEntity="Calculation" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Calculation" positionX="-8235" positionY="-4122" width="128" height="103"/>
+        <element name="PrimeNumbers" positionX="-8019" positionY="-4158" width="128" height="73"/>
+    </elements>
+</model>
